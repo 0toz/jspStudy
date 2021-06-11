@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function send_go(f) {
+		f.submit();
+	}
+	function send_go2(f) {
+		f.submit();
+	}
+</script>
+
+</head>
+<body>
+	<!-- 여러요구사항이 하나의 서블릿으로 이동할 때에는 공통의 파라미터값을 주어서 
+	파라미터값에 의해서 서블릿이 구분할 수 있도록 만든다.
+	 -->
+	 
+<form action="/0602_servlet/Ex16" method="post">
+		<fieldset style="width: 300px; background-color: lightyellow;">
+			<legend> 학점 계산기</legend>
+			<p>
+				이름 : <input type="text" name="n1" required>
+			</p>
+			<p>
+				국어 성적 : <input type="number" name="s1" required>
+			</p>
+			<p>
+				수학 성적 : <input type="number" name="s2" required>
+			</p>
+			<p>
+				영어 성적 : <input type="number" name="s3" required>
+			</p>
+
+			<input type="submit" value="결과보기">
+			<input type="hidden" name="cmd" value="3">
+		</fieldset>
+	</form>
+
+</body>
+</html>
